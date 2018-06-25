@@ -67,7 +67,7 @@ body {
     }
 
     .boardContainer {
-        justify-content: left;
+        justify-content: center;
     }
 
     #board {
