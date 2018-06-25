@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake and Ladder</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <div class="container flex-column l-pad-15 r-pad-15 full-min-height">
+        <h1 class="pageTitle is-text-center">SNAKE AND LADDER</h1>
+
+        <div class="flex-row flex-wrap flex-jsa boardContainer is-bordered">
+            <div class="is-absolute" id="coinsContainer">
+                <div class="is-relative" id="coinsList"></div>
+            </div>
+            <div class="flex-cr board is-relative" id="board">
+                <canvas id="board-canvas" class="is-absolute"></canvas>
+            </div>
+            <div class="full-flex flex-column flex-jsa stats pad-10" id="statistics">
+                <div class="flex-row flex-wrap flex-jc b-pad-10" id="message"></div>
+                <div class="flex-column flex-wrap flex-jc b-pad-10 playersTable">
+                    <table class="full-width" id="playerList"></table>
+                    <div class="flex-row flex-center pad-10">
+                        <button onclick="Game.addPlayer();" id="addPlayerBtn">Add Player</button>
+                    </div>
+                </div>
+                <div class="flex-row flex-wrap flex-jsa b-pad-10 is-hidden" id="dice">
+                    <button id="diceBtn" class="is-cursor-ptr" onclick="Game.rollDice();">ROLL DICE</button>
+                    <div id="diceValue" class="pad-10 is-bordered"></div>
+                </div>
+                <div class="flex-row flex-jsa">
+                    <button id="startGameBtn" class="is-cursor-ptr" onclick="Game.startGame();">Start Game</button>
+                    <button id="resetGameBtn" class="is-cursor-ptr" onclick="Game.resetGame();">Reset Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script>
+        (function() {
+            Game.init();
+        })();
+    </script>
+    <script src="js/game_events.js"></script>
+</body>
+</html>
