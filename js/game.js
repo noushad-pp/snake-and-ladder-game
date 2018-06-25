@@ -309,7 +309,6 @@ const Game = new function () {
         let coin = document.getElementById("coin-" + this.current_player);
         coin.classList.remove('is-hidden');
         let pos = document.getElementById("tile-" + position).getBoundingClientRect();
-        console.log(document.getElementById("tile-" + position) , pos);
         coin.style.top = pos.top + 10;
         coin.style.left = pos.left + 10;
     };
