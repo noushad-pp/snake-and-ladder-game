@@ -1,21 +1,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Snake and Ladder</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <div class="container flex-column l-pad-15 r-pad-15 full-min-height">
-        <h1 class="pageTitle is-text-center">SNAKE AND LADDER</h1>
+    <div class="container flex-column l-pad-15 r-pad-15 full-min-height full-max-width">
+        <h1 class="pageTitle is-text-center flex-row flex-wrap">SNAKE AND LADDER</h1>
 
         <div class="flex-row flex-wrap flex-jsa boardContainer is-bordered">
             <div class="is-absolute" id="coinsContainer">
                 <div class="is-relative" id="coinsList"></div>
             </div>
-            <div class="flex-cr board is-relative" id="board">
+            <div class="flex-cr board is-relative full-max-width" id="board">
                 <canvas id="board-canvas" class="is-absolute"></canvas>
             </div>
             <div class="full-flex flex-column flex-jsa stats pad-10" id="statistics">

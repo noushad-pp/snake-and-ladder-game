@@ -1,8 +1,8 @@
 const colours = ['red', 'green', 'magenta', 'cyan'];
 const START = 0;
 const VICTORY = 100;
-const tile_constant = 50; //tiles are 50 x 50 pixels size
-const tile_constant_half = 50 / 2;
+const tile_constant =  (window.screen && window.screen.width) < 600 ? 30: 50; //tiles are 50 x 50 pixels size
+const tile_constant_half = tile_constant / 2;
 
 //Player constructor
 const Player = function (name, color) {
